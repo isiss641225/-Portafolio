@@ -1,12 +1,25 @@
-// Funcionalidad para cambio de tema (Modo Claro / Oscuro)
-const themeToggleButton = document.getElementById('theme-toggle');
+// Desplazamiento suave al hacer clic en el menú
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
 
-themeToggleButton.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-  
-  if (document.body.classList.contains('dark-mode')) {
-    themeToggleButton.textContent = '☀️ Modo Claro';
-  } else {
-    themeToggleButton.textContent = '🌙 Modo Oscuro';
-  }
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+// Resaltar la tarjeta seleccionada al hacer clic
+const projectCards = document.querySelectorAll('.project-card');
+
+projectCards.forEach(card => {
+  card.addEventListener('click', () => {
+    projectCards.forEach(c => c.style.borderColor = 'var(--border-color)');
+    card.style.borderColor = 'var(--accent-color)';
+  });
 });

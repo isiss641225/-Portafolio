@@ -1,15 +1,15 @@
 /* ===================================================
-   VARIABLES DE COLOR: DURAZNO PASTEL & CREMA DULCE
+   VARIABLES DE COLOR: TERRACOTA & ARENA CÁLIDA
    =================================================== */
 :root {
-  --bg-color: #FAF4EE;         /* Crema suave de fondo */
+  --bg-color: #FDFBF7;         /* Arena/Marfil claro de fondo */
   --card-bg: #FFFFFF;          /* Blanco limpio para tarjetas */
-  --text-color: #4A3B32;        /* Café suave en lugar de negro */
-  --accent-color: #F29C85;      /* Durazno cálido */
-  --accent-hover: #E0856E;      /* Durazno un poco más intenso al pasar el mouse */
-  --tag-bg: #FDE8E0;           /* Rosa durazno pastel para etiquetas */
-  --border-color: #F2DDD5;      /* Borde sutil */
-  --shadow: 0 4px 15px rgba(224, 133, 110, 0.12); /* Sombra tenue cálida */
+  --text-color: #3D342F;        /* Marrón tierra oscuro para el texto */
+  --accent-color: #D97757;      /* Terracota cálido para acentos */
+  --accent-hover: #C26344;      /* Terracota más intenso */
+  --tag-bg: #F3E9DF;           /* Beige arena suave para etiquetas */
+  --border-color: #E8DCCF;      /* Borde sutil cálido */
+  --shadow: 0 4px 15px rgba(217, 119, 87, 0.1); /* Sombra suave */
 }
 
 /* ===================================================
@@ -97,30 +97,17 @@ section {
   border-bottom: 3px solid var(--tag-bg);
 }
 
-/* Hero & Video */
+/* Presentación (Hero) */
 .hero {
   text-align: center;
-  padding-top: 4rem;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
 }
 
 .hero p {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   max-width: 650px;
-  margin: 1rem auto 2rem auto;
-}
-
-.video-container {
-  margin: 2.5rem auto 0 auto;
-  max-width: 650px;
-  background-color: var(--card-bg);
-  padding: 1.2rem;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border-color);
-}
-
-.video-container video {
-  border-radius: 10px;
+  margin: 1.5rem auto 0 auto;
 }
 
 /* Tecnologías */
@@ -139,7 +126,7 @@ section {
   font-weight: 600;
   font-size: 0.9rem;
   border: 1px solid var(--border-color);
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .skill-tag:hover {
@@ -167,7 +154,7 @@ section {
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 25px rgba(224, 133, 110, 0.22);
+  box-shadow: 0 8px 25px rgba(217, 119, 87, 0.2);
 }
 
 .project-card img {
@@ -189,6 +176,7 @@ section {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.85rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .project-links a:hover {
